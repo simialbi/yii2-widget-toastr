@@ -13,8 +13,8 @@
     ],
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/die-coding/yii2-toastr/issues",
-        "source": "https://github.com/die-coding/yii2-toastr"
+        "issues": "https://github.com/simialbi/yii2-toastr/issues",
+        "source": "https://github.com/simialbi/yii2-toastr"
     },
 	"authors": [
 		{

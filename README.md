@@ -33,20 +33,44 @@ All options and events can be found on the [plugins repository page](https://git
 
 ```php
 <?php
-    use simialbi\yii2\Toastr;
-    
-    Toastr::widget([
-        'type' => Toastr::TYPE_SUCCESS,
-        'title' => 'This is a toast',
-        'message' => 'Example toast message',
-        'closeButton' => true,
-        'debug' => false,
-        'newestOnTop' => false,
-        'position' => Toastr::POSITION_BOTTOM_RIGHT,
-        'progressBar' => true
-        // [...]
-    ]);
+use simialbi\yii2\Toastr;
+
+Toastr::widget([
+    'type' => Toastr::TYPE_SUCCESS,
+    'title' => 'This is a toast',
+    'message' => 'Example toast message',
+    'closeButton' => true,
+    'debug' => false,
+    'newestOnTop' => false,
+    'position' => Toastr::POSITION_BOTTOM_RIGHT,
+    'progressBar' => true
+    // [...]
+]);
 ```
+
+### Options
+| Property            | Description                                                                                                                                  |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `type`              | **required** The alert type. This is one of the *ALERT_TYPE_** constants.                                                                    |
+| `title`             | **required** The title to render.                                                                                                            |
+| `message`           | **required** The main message to render                                                                                                      |
+| `closeButton`       | Whether or not to show the close button                                                                                                      |
+| `debug`             | Is it debug mode?                                                                                                                            |
+| `newestOnTop`       | Show the newest on top or at the end?                                                                                                        |
+| `progressBar`       | Whether or not to show a progress bar                                                                                                        |
+| `positionClass`     | The position of the toast. One of the *POSITION_** constants.                                                                                |
+| `preventDuplicates` | Whether or not to show duplicate toasts.                                                                                                     |
+| `onclick`           | A [\yii\web\JsExpression](https://www.yiiframework.com/doc/api/2.0/yii-web-jsexpression) with a js function which will be executed on click. |
+| `showDuration`      | The animation duration in milliseconds until the toast appears                                                                               |
+| `hideDuration`      | The animation duration in milliseconds until the toasts is hidden                                                                            |
+| `timeOut`           | How long the toast will display without user interaction                                                                                     |
+| `extendedTimeOut`   | How long the toast will display after a user hovers over it                                                                                  |
+| `showEasing`        | The animation easing to use while showing. One of the *EASING_** constants.                                                                  |
+| `hideEasing`        | The animation easing to use while hiding. One of the *EASING_** constants.                                                                   |
+| `showMethod`        | The animation method to use while showing. One of the *ANIMATION_** constants.                                                               |
+| `hideMethod`        | The animation method to use while hiding. One of the *ANIMATION_** constants.                                                                |
+| `tapToDismiss`      | Whether or not to dismiss the toast on tap.                                                                                                  |
+| `clientOptions`     | Manually override all client options here.                                                                                                   |
 
 
 ## License
