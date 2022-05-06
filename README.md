@@ -1,8 +1,8 @@
 # Yii2 Toastr - Simple flash toastr notifications for Yii2
 
-[![Latest Stable Version](https://poser.pugx.org/simialbi/yii2-toastr/v/stable?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
-[![Total Downloads](https://poser.pugx.org/simialbi/yii2-toastr/downloads?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
-[![License](https://poser.pugx.org/simialbi/yii2-toastr/license?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
+[![Latest Stable Version](https://poser.pugx.org/simialbi/yii2-widget-toastr/v/stable?format=flat-square)](https://packagist.org/packages/simialbi/yii2-widget-toastr)
+[![Total Downloads](https://poser.pugx.org/simialbi/yii2-widget-toastr/downloads?format=flat-square)](https://packagist.org/packages/simialbi/yii2-widget-toastr)
+[![License](https://poser.pugx.org/simialbi/yii2-widget-toastr/license?format=flat-square)](https://packagist.org/packages/simialbi/yii2-widget-toastr)
 
 ## Installation
 
@@ -11,13 +11,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ php composer.phar require --prefer-dist simialbi/yii2-toastr
+$ php composer.phar require --prefer-dist simialbi/yii2-widget-toastr
 ```
 
 or add
 
 ```
-"simialbi/yii2-toastr": "^1.0.0"
+"simialbi/yii2-widget-toastr": "^1.0.0"
 ```
 
 to the ```require``` section of your `composer.json`
@@ -75,7 +75,7 @@ Toastr::widget([
 
 ## License
 
-**yii2-toastr** is released under MIT license. See bundled [LICENSE](LICENSE) for details.
+**yii2-widget-toastr** is released under MIT license. See bundled [LICENSE](LICENSE) for details.
 
 ## Acknowledgements
 * [die-coding's toastr widget](https://github.com/die-coding/yii2-toastr)

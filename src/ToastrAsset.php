@@ -1,6 +1,6 @@
 <?php
 /**
- * @link https://github.com/simialbi/yii2-toastr
+ * @link https://github.com/simialbi/yii2-widget-toastr
  * @copyright Copyright (c) 2022 Simon Karlen
  * @license MIT
  */
