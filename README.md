@@ -1,78 +1,58 @@
 # Yii2 Toastr - Simple flash toastr notifications for Yii2
 
-[![Latest Version](https://img.shields.io/github/release/die-coding/yii2-toastr.svg?style=flat-square)](https://github.com/die-coding/yii2-toastr/releases)
-[![Software License](https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Quality Score](https://img.shields.io/scrutinizer/g/die-coding/yii2-toastr.svg?style=flat-square)](https://scrutinizer-ci.com/g/die-coding/yii2-toastr)
-[![Total Downloads](https://img.shields.io/packagist/dt/diecoding/yii2-toastr.svg?style=flat-square)](https://packagist.org/packages/diecoding/yii2-toastr)
+[![Latest Stable Version](https://poser.pugx.org/simialbi/yii2-toastr/v/stable?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
+[![Total Downloads](https://poser.pugx.org/simialbi/yii2-toastr/downloads?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
+[![License](https://poser.pugx.org/simialbi/yii2-toastr/license?format=flat-square)](https://packagist.org/packages/simialbi/yii2-toastr)
 
-## Cara Memasang
+## Installation
 
--   Melalui console
+The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-```
-composer require --prefer-dist diecoding/yii2-toastr "*"
-```
+Either run
 
--   Melalui `composer.json`
-
-1. Tambahkan pada baris `require`
-
-```
-"diecoding/yii2-toastr": "*"
+```bash
+$ php composer.phar require --prefer-dist simialbi/yii2-toastr
 ```
 
-2. Kemudian jalankan
+or add
 
 ```
-composer update
+"simialbi/yii2-toastr": "^1.0.0"
 ```
 
-## Cara Menggunakan
+to the ```require``` section of your `composer.json`
 
-1. Tambahkan di `views\layouts\main.php`
+## Demo
+* Demo can be found at http://codeseven.github.io/toastr/demo.html
+* [Demo using FontAwesome icons with toastr](http://plnkr.co/edit/6W9URNyyp2ItO4aUWzBB?p=preview)
+
+## Plugin docs
+All options and events can be found on the [plugins repository page](https://github.com/CodeSeven/toastr).
+
+## Example Usage
 
 ```php
-\diecoding\toastr\ToastrFlash::widget();
-
-// custom
-\diecoding\toastr\ToastrFlash::widget([
-    "hideDuration"      => 'custom value',
-    "timeOut"           => 'custom value',
-    "extendedTimeOut"   => 'custom value',
-    "showEasing"        => 'custom value',
-    "hideEasing"        => 'custom value',
-    "showMethod"        => 'custom value',
-    "hideMethod"        => 'custom value',
-    "tapToDismiss"      => 'custom value',
-]);
-
-// or
-\diecoding\toastr\ToastrFlash::widget([
-    'options' => [
-        "closeButton"       => 'custom value',
-        "debug"             => 'custom value',
-        "newestOnTop"       => 'custom value',
-        "progressBar"       => 'custom value',
-        "positionClass"     => 'custom value',
-        "preventDuplicates" => 'custom value',
-    ],
-]);
+<?php
+    use simialbi\yii2\Toastr;
+    
+    Toastr::widget([
+        'type' => Toastr::TYPE_SUCCESS,
+        'title' => 'This is a toast',
+        'message' => 'Example toast message',
+        'closeButton' => true,
+        'debug' => false,
+        'newestOnTop' => false,
+        'position' => Toastr::POSITION_BOTTOM_RIGHT,
+        'progressBar' => true
+        // [...]
+    ]);
 ```
 
-2. Set Session Flash
 
--   Cara Basic
+## License
 
-```php
-\Yii::$app->session->setFlash('error', 'Message');
+**yii2-toastr** is released under MIT license. See bundled [LICENSE](LICENSE) for details.
 
-\Yii::$app->session->setFlash('error', ['Message 1', 'Message 2', 'Message 3']);
-```
-
--   Cara Advanced
-
-```php
-\Yii::$app->session->setFlash('error', [['Title', 'Message']]);
-
-\Yii::$app->session->setFlash('error', [['Title 1', 'Message 1'], ['Title 2', 'Message 2'], ['Title 3', 'Message 3']]);
-```
+## Acknowledgements
+* [die-coding's toastr widget](https://github.com/die-coding/yii2-toastr)
+* [Code Seven](https://github.com/CodeSeven/toastr)

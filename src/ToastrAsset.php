@@ -1,42 +1,42 @@
 <?php
 /**
- * @link http://www.diecoding.com/
- * @author Die Coding (Sugeng Sulistiyawan) <diecoding@gmail.com>
- * @copyright Copyright (c) 2018
+ * @link https://github.com/simialbi/yii2-toastr
+ * @copyright Copyright (c) 2022 Simon Karlen
+ * @license MIT
  */
 
-namespace diecoding\toastr;
+namespace simialbi\yii2\toastr;
 
 use yii\web\AssetBundle;
 
 /**
- *
+ * The asset bundle needed for toastr
  */
 class ToastrAsset extends AssetBundle
 {
     /**
-     * @var string $sourcePath
+     * @inheritdoc
      */
     public $sourcePath = '@bower/toastr';
 
     /**
-     * @var array $css
+     * @inheritdoc
      */
     public $css = [
-        YII_ENV_DEV ? 'toastr.css' : 'toastr.min.css',
+        'toastr.css'
     ];
 
     /**
-     * @var array $js
+     * @inheritdoc
      */
     public $js = [
-        YII_ENV_DEV ? 'toastr.js' : 'toastr.min.js',
+        'toastr.js'
     ];
 
     /**
-     * @var array $depends
+     * @inheritdoc
      */
     public $depends = [
-        'yii\web\YiiAsset',
+        'yii\web\JqueryAsset'
     ];
 }
