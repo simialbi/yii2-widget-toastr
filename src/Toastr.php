@@ -5,7 +5,6 @@
  * @license MIT
  */
 
-
 namespace simialbi\yii2\toastr;
 
 use yii\base\Widget;
